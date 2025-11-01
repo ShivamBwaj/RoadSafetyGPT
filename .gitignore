@@ -41,7 +41,8 @@ wheels/
 Thumbs.db
 
 # Streamlit
-.streamlit/
+.streamlit/secrets.toml
+# Keep .streamlit/config.toml (needed for deployment)
 
 # Data files (optional - uncomment if you don't want to commit PDFs)
 # data/*.pdf

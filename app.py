@@ -13,7 +13,14 @@ import pandas as pd
 import requests
 try:
     import speech_recognition as sr
-    SPEECH_RECOGNITION_AVAILABLE = True
+    # Try to check if pyaudio is available (optional dependency)
+    try:
+        import pyaudio  # noqa: F401
+        SPEECH_RECOGNITION_AVAILABLE = True
+    except ImportError:
+        # Speech recognition is installed but pyaudio is not
+        SPEECH_RECOGNITION_AVAILABLE = False
+        sr = None
 except ImportError:
     SPEECH_RECOGNITION_AVAILABLE = False
     sr = None
