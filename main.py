@@ -11,7 +11,11 @@ from dotenv import load_dotenv
 
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+try:
+    from langchain_huggingface import HuggingFaceEmbeddings
+except ImportError:
+    # Fallback for older versions
+    from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.documents import Document
 from langchain_community.document_loaders import PyPDFLoader
 
@@ -56,8 +60,11 @@ class RoadSafetyRAG:
     """RAG system for road safety interventions"""
     
     def __init__(self):
+        # Use new langchain-huggingface package to avoid deprecation warning
+        # Model will be downloaded on first use (may take a moment on cloud)
         self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2"
+            model_name="sentence-transformers/all-MiniLM-L6-v2",
+            model_kwargs={'device': 'cpu'}  # Use CPU for cloud compatibility
         )
         self.text_splitter = RecursiveCharacterTextSplitter(
             chunk_size=1000,

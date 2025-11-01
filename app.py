@@ -123,13 +123,18 @@ if "quiz_score" not in st.session_state:
 def initialize_rag():
     """Initialize RAG system"""
     if st.session_state.rag_system is None:
-        with st.spinner("Initializing RAG system..."):
-            st.session_state.rag_system = RoadSafetyRAG()
-            # Try to build/load knowledge base
-            if st.session_state.rag_system.build_knowledge_base():
-                st.session_state.kb_built = True
-            else:
-                st.warning("⚠️ No PDFs found in /data folder. Please upload PDFs first.")
+        try:
+            with st.spinner("Initializing RAG system... (This may take a minute on first load)"):
+                st.session_state.rag_system = RoadSafetyRAG()
+                # Try to build/load knowledge base
+                if st.session_state.rag_system.build_knowledge_base():
+                    st.session_state.kb_built = True
+                else:
+                    st.warning("⚠️ No PDFs found in /data folder. Please upload PDFs first.")
+        except Exception as e:
+            st.error(f"❌ Error initializing RAG system: {str(e)}")
+            st.info("💡 If this persists, try refreshing the page or check the logs.")
+            st.session_state.rag_system = None
 
 def recognize_speech():
     """Capture voice input using speech recognition"""
