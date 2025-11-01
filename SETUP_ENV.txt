@@ -1,0 +1,15 @@
+===========================================
+ENVIRONMENT SETUP INSTRUCTIONS
+===========================================
+
+Create a .env file in the project root with the following content:
+
+GROQ_API_KEY=your_groq_api_key_here
+GROQ_MODEL=llama-3.1-8b-instant
+
+Replace 'your_groq_api_key_here' with your actual Groq API key.
+
+You can get a Groq API key from: https://console.groq.com
+
+===========================================
+

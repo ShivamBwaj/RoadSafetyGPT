@@ -1,0 +1,73 @@
+[
+  {
+    "intervention": "Install rumble strips",
+    "context": "Straight rural highways with frequent overspeeding and rear-end collisions.",
+    "source": "IRC:SP:84 - Clause 5.2.3",
+    "impact": "Reduces speeding-related crashes by alerting inattentive drivers.",
+    "keywords": ["speeding", "rural", "straight", "highway"]
+  },
+  {
+    "intervention": "Add reflective delineators and chevron signs",
+    "context": "Sharp curves or low-visibility bends on hilly terrain.",
+    "source": "IRC 67 - Clause 7.3.2",
+    "impact": "Improves nighttime visibility and curve negotiation.",
+    "keywords": ["curve", "bend", "visibility", "night", "hill"]
+  },
+  {
+    "intervention": "Provide zebra crossings and pedestrian refuges",
+    "context": "Urban roads with school zones or heavy pedestrian movement.",
+    "source": "IRC 35 - Clause 4.3, IRC 67 - 7.4.2",
+    "impact": "Enhances pedestrian safety and reduces conflicts with vehicles.",
+    "keywords": ["pedestrian", "school", "urban"]
+  },
+  {
+    "intervention": "Install solar-powered blinkers at intersections",
+    "context": "Unsignalized rural junctions or blackspots with poor visibility.",
+    "source": "IRC:SP:87 - Clause 8.5",
+    "impact": "Warns approaching drivers and reduces side-impact crashes.",
+    "keywords": ["intersection", "rural", "blackspot", "warning"]
+  },
+  {
+    "intervention": "Enhance road markings with thermoplastic paint",
+    "context": "Faded lane lines on highways and high-speed corridors.",
+    "source": "IRC 35 - Clause 5.1",
+    "impact": "Improves lane discipline and visibility during night or rain.",
+    "keywords": ["marking", "line", "faded", "visibility"]
+  },
+  {
+    "intervention": "Construct pedestrian foot overbridges",
+    "context": "High-speed urban roads or national highways passing through settlements.",
+    "source": "IRC:SP:84 - Clause 6.1",
+    "impact": "Separates pedestrian traffic, preventing mid-block crossings.",
+    "keywords": ["pedestrian", "bridge", "urban", "highway"]
+  },
+  {
+    "intervention": "Add crash barriers and guard rails",
+    "context": "Mountain roads or sharp curves with steep drop-offs.",
+    "source": "IRC:SP:87 - Clause 9.4",
+    "impact": "Prevents vehicles from leaving roadway, reducing fatal crashes.",
+    "keywords": ["mountain", "curve", "guardrail", "barrier"]
+  },
+  {
+    "intervention": "Implement speed humps and traffic calming measures",
+    "context": "Residential areas or school zones with high pedestrian activity.",
+    "source": "IRC 35 - Clause 6.2.1",
+    "impact": "Forces speed reduction and increases driver awareness in sensitive zones.",
+    "keywords": ["speed", "residential", "school", "calming"]
+  },
+  {
+    "intervention": "Install LED street lighting with adequate lux levels",
+    "context": "Rural highways or unlit sections with high nighttime crash rates.",
+    "source": "IRC:SP:84 - Clause 4.1.2",
+    "impact": "Improves visibility, reduces nighttime crashes by 30-40%.",
+    "keywords": ["lighting", "night", "rural", "visibility"]
+  },
+  {
+    "intervention": "Deploy variable message signs and speed display boards",
+    "context": "High-speed corridors or accident-prone zones requiring dynamic warnings.",
+    "source": "IRC 67 - Clause 8.1.3",
+    "impact": "Provides real-time warnings and encourages speed compliance.",
+    "keywords": ["sign", "speed", "warning", "display"]
+  }
+]
+
