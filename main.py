@@ -230,10 +230,19 @@ Format your response in a clear, structured manner."""
             for doc in relevant_chunks
         ]))
         
+        # Add scoring to interventions
+        from utils import calculate_intervention_score
+        scored_interventions = []
+        for inv in matched_interventions:
+            inv_copy = inv.copy()
+            inv_copy["priority_score"] = calculate_intervention_score(inv, query)
+            scored_interventions.append(inv_copy)
+        
         return {
             "response": llm_response,
-            "matched_interventions": matched_interventions,
+            "matched_interventions": scored_interventions,
             "sources": sources,
-            "relevant_chunks": relevant_chunks
+            "relevant_chunks": relevant_chunks,
+            "query": query
         }
 
