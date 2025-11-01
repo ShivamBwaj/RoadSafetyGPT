@@ -253,6 +253,26 @@ with st.sidebar:
                 else:
                     st.error("❌ Failed to rebuild knowledge base. Check if PDFs exist in /data folder.")
     
+    if st.button("🔍 Extract Interventions from PDFs", use_container_width=True):
+        if not st.session_state.kb_built:
+            st.warning("⚠️ Please rebuild knowledge base first")
+        else:
+            with st.spinner("🤖 AI is extracting interventions from documents... (This may take 2-3 minutes)"):
+                try:
+                    from extract_interventions import InterventionExtractor
+                    extractor = InterventionExtractor()
+                    extractor.run_extraction(use_database=True)
+                    
+                    # Reload interventions in RAG system
+                    st.session_state.rag_system.load_interventions()
+                    
+                    st.success("✅ Interventions extracted and updated!")
+                    st.info(f"📊 Current interventions: {len(st.session_state.rag_system.interventions)}")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"❌ Error: {str(e)}")
+                    st.info("💡 Make sure GROQ_API_KEY is set in environment variables")
+    
     st.markdown("---")
     
     st.subheader("📤 Upload PDFs")

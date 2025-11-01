@@ -4,70 +4,833 @@
     "context": "Straight rural highways with frequent overspeeding and rear-end collisions.",
     "source": "IRC:SP:84 - Clause 5.2.3",
     "impact": "Reduces speeding-related crashes by alerting inattentive drivers.",
-    "keywords": ["speeding", "rural", "straight", "highway"]
+    "keywords": [
+      "speeding",
+      "rural",
+      "straight",
+      "highway"
+    ]
   },
   {
     "intervention": "Add reflective delineators and chevron signs",
     "context": "Sharp curves or low-visibility bends on hilly terrain.",
     "source": "IRC 67 - Clause 7.3.2",
     "impact": "Improves nighttime visibility and curve negotiation.",
-    "keywords": ["curve", "bend", "visibility", "night", "hill"]
+    "keywords": [
+      "curve",
+      "bend",
+      "visibility",
+      "night",
+      "hill"
+    ]
   },
   {
     "intervention": "Provide zebra crossings and pedestrian refuges",
     "context": "Urban roads with school zones or heavy pedestrian movement.",
     "source": "IRC 35 - Clause 4.3, IRC 67 - 7.4.2",
     "impact": "Enhances pedestrian safety and reduces conflicts with vehicles.",
-    "keywords": ["pedestrian", "school", "urban"]
+    "keywords": [
+      "pedestrian",
+      "school",
+      "urban"
+    ]
   },
   {
     "intervention": "Install solar-powered blinkers at intersections",
     "context": "Unsignalized rural junctions or blackspots with poor visibility.",
     "source": "IRC:SP:87 - Clause 8.5",
     "impact": "Warns approaching drivers and reduces side-impact crashes.",
-    "keywords": ["intersection", "rural", "blackspot", "warning"]
+    "keywords": [
+      "intersection",
+      "rural",
+      "blackspot",
+      "warning"
+    ]
   },
   {
     "intervention": "Enhance road markings with thermoplastic paint",
     "context": "Faded lane lines on highways and high-speed corridors.",
     "source": "IRC 35 - Clause 5.1",
     "impact": "Improves lane discipline and visibility during night or rain.",
-    "keywords": ["marking", "line", "faded", "visibility"]
+    "keywords": [
+      "marking",
+      "line",
+      "faded",
+      "visibility"
+    ]
   },
   {
     "intervention": "Construct pedestrian foot overbridges",
     "context": "High-speed urban roads or national highways passing through settlements.",
     "source": "IRC:SP:84 - Clause 6.1",
     "impact": "Separates pedestrian traffic, preventing mid-block crossings.",
-    "keywords": ["pedestrian", "bridge", "urban", "highway"]
+    "keywords": [
+      "pedestrian",
+      "bridge",
+      "urban",
+      "highway"
+    ]
   },
   {
     "intervention": "Add crash barriers and guard rails",
     "context": "Mountain roads or sharp curves with steep drop-offs.",
     "source": "IRC:SP:87 - Clause 9.4",
     "impact": "Prevents vehicles from leaving roadway, reducing fatal crashes.",
-    "keywords": ["mountain", "curve", "guardrail", "barrier"]
+    "keywords": [
+      "mountain",
+      "curve",
+      "guardrail",
+      "barrier"
+    ]
   },
   {
     "intervention": "Implement speed humps and traffic calming measures",
     "context": "Residential areas or school zones with high pedestrian activity.",
     "source": "IRC 35 - Clause 6.2.1",
     "impact": "Forces speed reduction and increases driver awareness in sensitive zones.",
-    "keywords": ["speed", "residential", "school", "calming"]
+    "keywords": [
+      "speed",
+      "residential",
+      "school",
+      "calming"
+    ]
   },
   {
     "intervention": "Install LED street lighting with adequate lux levels",
     "context": "Rural highways or unlit sections with high nighttime crash rates.",
     "source": "IRC:SP:84 - Clause 4.1.2",
     "impact": "Improves visibility, reduces nighttime crashes by 30-40%.",
-    "keywords": ["lighting", "night", "rural", "visibility"]
+    "keywords": [
+      "lighting",
+      "night",
+      "rural",
+      "visibility"
+    ]
   },
   {
     "intervention": "Deploy variable message signs and speed display boards",
     "context": "High-speed corridors or accident-prone zones requiring dynamic warnings.",
     "source": "IRC 67 - Clause 8.1.3",
     "impact": "Provides real-time warnings and encourages speed compliance.",
-    "keywords": ["sign", "speed", "warning", "display"]
+    "keywords": [
+      "sign",
+      "speed",
+      "warning",
+      "display"
+    ]
+  },
+  {
+    "intervention": "Use evidence-led approaches",
+    "context": "To make future improvements, by identifying gaps and areas for strengthening",
+    "source": "road_safety_handbook_who.pdf - Various sections",
+    "impact": "Improves road safety by identifying effective interventions",
+    "keywords": [
+      "evidence-led",
+      "approach",
+      "improvement",
+      "strengthening"
+    ]
+  },
+  {
+    "intervention": "Facilitate a review of recent progress",
+    "context": "To set priorities for the new Decade of Action",
+    "source": "road_safety_handbook_who.pdf - Clause on exercise",
+    "impact": "Helps in setting priorities for road safety efforts",
+    "keywords": [
+      "review",
+      "progress",
+      "priority",
+      "action"
+    ]
+  },
+  {
+    "intervention": "Maximize reductions in deaths and serious injuries",
+    "context": "Using the international evidence base on effective interventions in road safety",
+    "source": "road_safety_handbook_who.pdf - Clause on international evidence base",
+    "impact": "Reduces road fatalities and serious injuries",
+    "keywords": [
+      "reduction",
+      "death",
+      "injury",
+      "evidence"
+    ]
+  },
+  {
+    "intervention": "Traffic calming measures",
+    "context": "Pedestrian and vehicle safety by reducing speed",
+    "source": "irc.gov.in.070.2017.pdf",
+    "impact": "Reduces speed, traffic flow disturbances, and noise",
+    "keywords": [
+      "traffic calming",
+      "speed reduction",
+      "pedestrian safety"
+    ]
+  },
+  {
+    "intervention": "Road humps, rumble strips, raised crossings, platform junctions, speed tables, and ramps",
+    "context": "Physical signal to driver to curtail speed forcing driver to slow down to the desired speed",
+    "source": "mort.248.2019.pdf - 7.10.3.1",
+    "impact": "Influences driver behavior by means of jerks and vibrations to the vehicle",
+    "keywords": [
+      "road humps",
+      "rumble strips",
+      "speed reduction",
+      "driver behavior"
+    ]
+  },
+  {
+    "intervention": "Speed humps",
+    "context": "Well-designed traffic calming measures provide safe access for pedestrians and cyclists by reducing the speed of motorized vehicles",
+    "source": "irc.gov.in.070.2017.pdf",
+    "impact": "Reduces speeds, crashes, and improves conditions for cycling and pedestrian safety",
+    "keywords": [
+      "speed humps",
+      "traffic calming",
+      "pedestrian safety",
+      "cycling safety"
+    ]
+  },
+  {
+    "intervention": "Bus Rapid Transport (BRT) corridors and bus lanes",
+    "context": "Can be used as emergency lanes",
+    "source": "irc.gov.in.070.2017.pdf",
+    "impact": "Provides safe access for emergency vehicles",
+    "keywords": [
+      "BRT",
+      "bus lanes",
+      "emergency access"
+    ]
+  },
+  {
+    "intervention": "Provide safe, continuous, and convenient paths for pedestrians",
+    "context": "Pedestrian routes throughout the study area",
+    "source": "IRC:103-2012 - Section 6.18.4",
+    "impact": "Enhances pedestrian safety and accessibility",
+    "keywords": [
+      "pedestrian",
+      "safety",
+      "accessibility",
+      "pathways"
+    ]
+  },
+  {
+    "intervention": "Ensure design, posted, and operating traffic speeds are compatible with pedestrian safety",
+    "context": "Pedestrian routes throughout the study area",
+    "source": "IRC:103-2012 - Section 6.18.4",
+    "impact": "Reduces pedestrian-vehicle conflicts and crashes",
+    "keywords": [
+      "pedestrian",
+      "safety",
+      "traffic speed",
+      "compatibility"
+    ]
+  },
+  {
+    "intervention": "Provide dropped kerbs at all intersections and mid-block locations",
+    "context": "Locations where pedestrians are to cross",
+    "source": "IRC:SP:088-2019",
+    "impact": "Enhances pedestrian accessibility and safety",
+    "keywords": [
+      "pedestrian",
+      "accessibility",
+      "dropped kerb",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Install correct signs and pavement markings at each pedestrian facility",
+    "context": "Each pedestrian facility",
+    "source": "IRC:SP:088-2019",
+    "impact": "Improves pedestrian visibility and safety",
+    "keywords": [
+      "pedestrian",
+      "safety",
+      "signage",
+      "pavement markings"
+    ]
+  },
+  {
+    "intervention": "Ensure each pedestrian facility is well illuminated at night",
+    "context": "Each pedestrian facility",
+    "source": "IRC:SP:088-2019",
+    "impact": "Improves pedestrian visibility and safety at night",
+    "keywords": [
+      "pedestrian",
+      "safety",
+      "illumination",
+      "visibility"
+    ]
+  },
+  {
+    "intervention": "Conduct pedestrian safety audit with a comprehensive checklist",
+    "context": "Pedestrian safety audit",
+    "source": "IRC:103-2012 - Section 6.18.4",
+    "impact": "Identifies pedestrian safety issues and areas for improvement",
+    "keywords": [
+      "pedestrian",
+      "safety",
+      "audit",
+      "checklist"
+    ]
+  },
+  {
+    "intervention": "Signalized Intersection at Grade",
+    "context": "Major street has a traffic volume of 650 to 800 vehicles per hour (both direction) and minor street has 200 to 250 vehicles per hour in one direction only",
+    "source": "Pocket Book for Highway Engineers, Chapter 7.2.1, Time separated intersection/Signalized Intersection at – Grade",
+    "impact": "Reduces accidents by providing a safe and controlled environment for drivers",
+    "keywords": [
+      "signalized",
+      "intersection",
+      "grade",
+      "traffic",
+      "volume"
+    ]
+  },
+  {
+    "intervention": "Grade-Separated Intersections",
+    "context": "Total traffic of all the arms of the intersection is in excess of 10,000 PCU’s per hour",
+    "source": "Pocket Book for Highway Engineers, Chapter 7.2.1, Space Separated Intersection/Grade Separated Intersections",
+    "impact": "Reduces accidents by separating conflicting traffic movements",
+    "keywords": [
+      "grade-separated",
+      "intersection",
+      "traffic",
+      "volume",
+      "separation"
+    ]
+  },
+  {
+    "intervention": "Stop Control at Intersections",
+    "context": "Traffic on the cross road must stop prior to entering the project highway",
+    "source": "IRC:SP:84 - Clause iv)",
+    "impact": "Reduces accidents by ensuring that drivers on the cross road come to a complete stop before entering the project highway",
+    "keywords": [
+      "stop",
+      "control",
+      "intersection",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Proper Design of Road Intersections",
+    "context": "Intersections need proper design and are to be notified through appropriate signs and markings",
+    "source": "Pocket Book for Highway Engineers, Chapter 7.2",
+    "impact": "Reduces accidents by providing a safe and clear environment for drivers",
+    "keywords": [
+      "intersection",
+      "design",
+      "signs",
+      "markings",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Notification through Appropriate Signs and Markings",
+    "context": "Intersections need proper design and are to be notified through appropriate signs and markings",
+    "source": "Pocket Book for Highway Engineers, Chapter 7.2",
+    "impact": "Reduces accidents by providing clear guidance to drivers",
+    "keywords": [
+      "signs",
+      "markings",
+      "intersection",
+      "notification",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Traffic calming in towns and villages",
+    "context": "To reduce operating speeds",
+    "source": "IRC:SP:88-2019 - Clause 5.1.12",
+    "impact": "Reduces operating speeds",
+    "keywords": [
+      "traffic calming",
+      "towns",
+      "villages",
+      "speed reduction"
+    ]
+  },
+  {
+    "intervention": "Raised crossings",
+    "context": "To reduce operating speeds",
+    "source": "IRC:SP:88-2019 - Clause 5.1.12",
+    "impact": "Reduces operating speeds",
+    "keywords": [
+      "raised crossings",
+      "speed reduction"
+    ]
+  },
+  {
+    "intervention": "Gateway treatments",
+    "context": "To reduce operating speeds",
+    "source": "IRC:SP:88-2019 - Clause 5.1.12",
+    "impact": "Reduces operating speeds",
+    "keywords": [
+      "gateway treatments",
+      "speed reduction"
+    ]
+  },
+  {
+    "intervention": "Road narrowing",
+    "context": "To reduce operating speeds",
+    "source": "IRC:SP:88-2019 - Clause 5.1.12",
+    "impact": "Reduces operating speeds",
+    "keywords": [
+      "road narrowing",
+      "speed reduction"
+    ]
+  },
+  {
+    "intervention": "Speed cameras",
+    "context": "To enforce speed limits",
+    "source": "IRC:SP:88-2019 - Clause 5.1.12",
+    "impact": "Enforces speed limits",
+    "keywords": [
+      "speed cameras",
+      "speed enforcement"
+    ]
+  },
+  {
+    "intervention": "Safe infrastructure",
+    "context": "To support speed management policy development",
+    "source": "road_safety_handbook_who.pdf - Clause (no specific clause mentioned)",
+    "impact": "Supports speed management policy development",
+    "keywords": [
+      "safe infrastructure",
+      "speed management"
+    ]
+  },
+  {
+    "intervention": "Enforcement site selection",
+    "context": "To support speed management policy development",
+    "source": "road_safety_handbook_who.pdf - Clause (no specific clause mentioned)",
+    "impact": "Supports speed management policy development",
+    "keywords": [
+      "enforcement site selection",
+      "speed management"
+    ]
+  },
+  {
+    "intervention": "Technology approvals",
+    "context": "To support speed management policy development",
+    "source": "road_safety_handbook_who.pdf - Clause (no specific clause mentioned)",
+    "impact": "Supports speed management policy development",
+    "keywords": [
+      "technology approvals",
+      "speed management"
+    ]
+  },
+  {
+    "intervention": "Offence processing",
+    "context": "To support speed management policy development",
+    "source": "road_safety_handbook_who.pdf - Clause (no specific clause mentioned)",
+    "impact": "Supports speed management policy development",
+    "keywords": [
+      "offence processing",
+      "speed management"
+    ]
+  },
+  {
+    "intervention": "Offence disposals (fines, driving bans, offender retraining)",
+    "context": "To support speed management policy development",
+    "source": "road_safety_handbook_who.pdf - Clause (no specific clause mentioned)",
+    "impact": "Supports speed management policy development",
+    "keywords": [
+      "offence disposals",
+      "speed management"
+    ]
+  },
+  {
+    "intervention": "Use clear, ample, and effective signing",
+    "context": "Places to provide adequate reaction time for the driver",
+    "source": "IRC: 67 code of practice for road signs and reference",
+    "impact": "Provides adequate reaction time for the driver",
+    "keywords": [
+      "signing",
+      "reaction time",
+      "driver"
+    ]
+  },
+  {
+    "intervention": "Mark concept proposals on the road using chalk, traffic cones, and other temporary means",
+    "context": "Testing for functionality",
+    "source": "IRC:70-2017 - Clause 43",
+    "impact": "Tests for functionality",
+    "keywords": [
+      "testing",
+      "functionality",
+      "temporary means"
+    ]
+  },
+  {
+    "intervention": "Put necessary instructions, barricades, and signages",
+    "context": "According to IRC:SP:55 and IRC:67",
+    "source": "IRC:70-2017 - Clause 43",
+    "impact": "Ensures necessary instructions, barricades, and signages are in place",
+    "keywords": [
+      "instructions",
+      "barricades",
+      "signages"
+    ]
+  },
+  {
+    "intervention": "Modify design as per site conditions if any aspect of design is not compatible",
+    "context": "Detailed drawings must be prepared only after the concerned authority or street design cell approves the concept plans",
+    "source": "IRC:70-2017 - Clause 43",
+    "impact": "Ensures design compatibility with site conditions",
+    "keywords": [
+      "design",
+      "compatibility",
+      "site conditions"
+    ]
+  },
+  {
+    "intervention": "Use pavement markings",
+    "context": "To give clear cut message and influence driving behavior",
+    "source": "IRC:SP:88-2019 - Clause 5.5.2",
+    "impact": "Influences driving behavior",
+    "keywords": [
+      "pavement markings",
+      "driving behavior"
+    ]
+  },
+  {
+    "intervention": "Locate signs in a conspicuous position",
+    "context": "To be seen by drivers/riders",
+    "source": "IRC:SP:88-2019 - Clause X",
+    "impact": "Ensures signs are visible to drivers/riders",
+    "keywords": [
+      "visibility",
+      "drivers",
+      "riders"
+    ]
+  },
+  {
+    "intervention": "Ensure signs are clear and legible",
+    "context": "To be read from a suitable distance",
+    "source": "IRC:SP:88-2019 - Clause X",
+    "impact": "Ensures signs are readable",
+    "keywords": [
+      "clarity",
+      "legibility",
+      "readability"
+    ]
+  },
+  {
+    "intervention": "Ensure signs are comprehensible",
+    "context": "To be understood by drivers",
+    "source": "IRC:SP:88-2019 - Clause X",
+    "impact": "Ensures signs are understandable",
+    "keywords": [
+      "comprehension",
+      "understanding",
+      "drivers"
+    ]
+  },
+  {
+    "intervention": "Mark the drop off area with signage and kerb ramp",
+    "context": "To provide clear and safe access for persons with vision impairment",
+    "source": "IRC:SP:117-2018",
+    "impact": "Provides clear and safe access for persons with vision impairment",
+    "keywords": [
+      "drop off area",
+      "signage",
+      "kerb ramp",
+      "vision impairment"
+    ]
+  },
+  {
+    "intervention": "Provide even lighting for clear visibility of footpath and obstacles",
+    "context": "To ensure safe and clear visibility",
+    "source": "IRC:SP:117-2018",
+    "impact": "Ensures safe and clear visibility",
+    "keywords": [
+      "lighting",
+      "visibility",
+      "footpath",
+      "obstacles"
+    ]
+  },
+  {
+    "intervention": "Use clear and legible signage and accessible route information at bus stops",
+    "context": "To provide clear and accessible information",
+    "source": "IRC:SP:117-2018",
+    "impact": "Provides clear and accessible information",
+    "keywords": [
+      "signage",
+      "bus stops",
+      "accessibility",
+      "information"
+    ]
+  },
+  {
+    "intervention": "Use graphic/pictorial symbols/Braille in signage",
+    "context": "To provide clear and accessible information",
+    "source": "IRC:SP:117-2018",
+    "impact": "Provides clear and accessible information",
+    "keywords": [
+      "signage",
+      "symbols",
+      "Braille",
+      "accessibility"
+    ]
+  },
+  {
+    "intervention": "Use legible fonts and bright color contrast in signage",
+    "context": "To provide clear and readable information",
+    "source": "IRC:SP:117-2018",
+    "impact": "Provides clear and readable information",
+    "keywords": [
+      "signage",
+      "fonts",
+      "color contrast",
+      "readability"
+    ]
+  },
+  {
+    "intervention": "Concrete barrier",
+    "context": "Heavy trucks and buses may warrant a higher performance level barrier, especially if barrier penetration by a vehicle is likely to have serious consequences",
+    "source": "mort.278.1.2010 - Not specified",
+    "impact": "Prevents serious consequences from barrier penetration",
+    "keywords": [
+      "concrete",
+      "barrier",
+      "heavy",
+      "trucks",
+      "buses"
+    ]
+  },
+  {
+    "intervention": "Steel plate beam guardrail",
+    "context": "Areas of restricted geometry, high speeds, high traffic volumes, and/or where railing repair creates hazardous conditions for both the repair crew and for motorists using the roadway",
+    "source": "mort.278.1.2010 - Not specified",
+    "impact": "Prevents hazardous conditions during repair",
+    "keywords": [
+      "steel",
+      "plate",
+      "beam",
+      "guardrail",
+      "restricted",
+      "geometry"
+    ]
+  },
+  {
+    "intervention": "Rigid barrier",
+    "context": "Areas of restricted geometry, high speeds, high traffic volumes, and/or where railing repair creates hazardous conditions for both the repair crew and for motorists using the roadway",
+    "source": "mort.278.1.2010 - Not specified",
+    "impact": "Prevents hazardous conditions during repair",
+    "keywords": [
+      "rigid",
+      "barrier",
+      "restricted",
+      "geometry"
+    ]
+  },
+  {
+    "intervention": "Pedestrian guardrails",
+    "context": "Hazardous locations on straight stretches, particularly busy reaches where the road is congested and vehicles move at a fast pace",
+    "source": "irc.gov.in.sp.087.2019 - Clause iii)",
+    "impact": "Channels pedestrians onto planned crossing locations",
+    "keywords": [
+      "pedestrian",
+      "guardrails",
+      "hazardous",
+      "locations",
+      "straight",
+      "stretches"
+    ]
+  },
+  {
+    "intervention": "Pedestrian guardrails at junctions/intersections",
+    "context": "Junctions/intersections, particularly signalized intersections",
+    "source": "irc.gov.in.sp.087.2019 - Clause iii)",
+    "impact": "Prevents people from crossing the junctions diagonally",
+    "keywords": [
+      "pedestrian",
+      "guardrails",
+      "junctions",
+      "intersections",
+      "signalized"
+    ]
+  },
+  {
+    "intervention": "Pedestrian guardrails at schools",
+    "context": "Schools, where children would otherwise run straight into the road",
+    "source": "irc.gov.in.sp.084.2019 - Clause iii)",
+    "impact": "Prevents children from running into the road",
+    "keywords": [
+      "pedestrian",
+      "guardrails",
+      "schools",
+      "children"
+    ]
+  },
+  {
+    "intervention": "Turned-down-guardrail",
+    "context": "Recommended for steel barriers, as shown on the drawings or as directed by the Engineer",
+    "source": "mort.250.2013 - Clause 811.3.6",
+    "impact": "Not specified",
+    "keywords": [
+      "turned-down",
+      "guardrail",
+      "steel",
+      "barriers"
+    ]
+  },
+  {
+    "intervention": "Anchored in back slope",
+    "context": "Recommended for steel barriers, as shown on the drawings or as directed by the Engineer",
+    "source": "mort.250.2013 - Clause 811.3.6",
+    "impact": "Not specified",
+    "keywords": [
+      "anchored",
+      "back",
+      "slope",
+      "steel",
+      "barriers"
+    ]
+  },
+  {
+    "intervention": "Polymer fiber railings",
+    "context": "Urban situations, to fit in with the environment or for better aesthetics",
+    "source": "irc.gov.in.103.2012 - Clause 6.1.9.2",
+    "impact": "Fits in with the environment or improves aesthetics",
+    "keywords": [
+      "polymer",
+      "fiber",
+      "railings",
+      "urban",
+      "environment"
+    ]
+  },
+  {
+    "intervention": "Provide interior lighting",
+    "context": "Toll booths and facility building offices",
+    "source": "IRC:SP:73 - Clause 2.1",
+    "impact": "Improves visibility and reduces glare",
+    "keywords": [
+      "interior",
+      "lighting",
+      "visibility",
+      "glare"
+    ]
+  },
+  {
+    "intervention": "Use exterior lighting",
+    "context": "Toll plazas to enhance night visibility",
+    "source": "IRC:SP:73 - Clause 2.2",
+    "impact": "Improves night visibility and safety",
+    "keywords": [
+      "exterior",
+      "lighting",
+      "visibility",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Install lighting with a minimum of 40 lux horizontal illuminance",
+    "context": "Cycle facilities to ensure comfort and safety for cyclists",
+    "source": "IRC:011 - Clause 7.4",
+    "impact": "Improves comfort and safety for cyclists",
+    "keywords": [
+      "lighting",
+      "cycling",
+      "safety",
+      "comfort"
+    ]
+  },
+  {
+    "intervention": "Install lighting with a minimum of 20 lux vertical illuminance",
+    "context": "Cycle facilities to ensure visibility and safety for cyclists",
+    "source": "IRC:011 - Clause 7.4",
+    "impact": "Improves visibility and safety for cyclists",
+    "keywords": [
+      "lighting",
+      "cycling",
+      "visibility",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Direct lighting downward",
+    "context": "Pedestrian and bicycle lanes to prevent up-lighting",
+    "source": "IRC:103 - Clause 49",
+    "impact": "Prevents up-lighting and improves safety",
+    "keywords": [
+      "lighting",
+      "pedestrian",
+      "bicycle",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Provide lighting every 20-30 m interval",
+    "context": "Pedestrian and bicycle lanes to ensure even lighting",
+    "source": "IRC:103 - Clause 49",
+    "impact": "Ensures even lighting and improves safety",
+    "keywords": [
+      "lighting",
+      "pedestrian",
+      "bicycle",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Use wall-mounted lighting",
+    "context": "Pedestrian and bicycle lanes to reduce street furniture and improve safety",
+    "source": "IRC:103 - Clause 49",
+    "impact": "Reduces street furniture and improves safety",
+    "keywords": [
+      "lighting",
+      "pedestrian",
+      "bicycle",
+      "safety"
+    ]
+  },
+  {
+    "intervention": "Use high-pressure sodium lighting",
+    "context": "City and town centers to improve aesthetic effect and color definition",
+    "source": "IRC:103 - Clause 49",
+    "impact": "Improves aesthetic effect and color definition",
+    "keywords": [
+      "lighting",
+      "aesthetic",
+      "color",
+      "definition"
+    ]
+  },
+  {
+    "intervention": "Blackspot identification and reporting",
+    "context": "State-wise identification of blackspots for targeted interventions",
+    "source": "RA_2021_Compressed.pdf - Section 51",
+    "impact": "Improves road safety by identifying high-risk locations",
+    "keywords": [
+      "blackspot",
+      "identification",
+      "reporting",
+      "targeted"
+    ]
+  },
+  {
+    "intervention": "Collection of Road Accident Data",
+    "context": "Standardized formats for collecting road accident data",
+    "source": "RA_2021_Compressed.pdf - Appendix-I",
+    "impact": "Enhances data-driven decision-making for road safety",
+    "keywords": [
+      "data",
+      "collection",
+      "road",
+      "accident"
+    ]
+  },
+  {
+    "intervention": "State-wise list of top ten black spots",
+    "context": "Prioritization of high-risk locations for interventions",
+    "source": "RA_2019.pdf - Annexure 52",
+    "impact": "Focuses resources on most critical road safety issues",
+    "keywords": [
+      "blackspot",
+      "prioritization",
+      "intervention"
+    ]
   }
 ]
-
