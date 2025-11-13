@@ -275,10 +275,10 @@ with st.sidebar:
     
     st.markdown("---")
     
-    st.subheader("📤 Upload PDFs")
+    st.subheader("📤 Upload Documents")
     uploaded_files = st.file_uploader(
-        "Upload road safety PDFs",
-        type=["pdf"],
+        "Upload road safety documents (PDF, XLSX, XLS)",
+        type=["pdf", "xlsx", "xls"],
         accept_multiple_files=True
     )
     
@@ -286,17 +286,35 @@ with st.sidebar:
         data_dir = Path("data")
         data_dir.mkdir(exist_ok=True)
         
+        pdf_count = 0
+        xlsx_count = 0
+        
         for uploaded_file in uploaded_files:
             file_path = data_dir / uploaded_file.name
             with open(file_path, "wb") as f:
                 f.write(uploaded_file.getbuffer())
-            st.success(f"✅ Saved: {uploaded_file.name}")
+            
+            if uploaded_file.name.lower().endswith('.pdf'):
+                pdf_count += 1
+                st.success(f"✅ Saved PDF: {uploaded_file.name}")
+            elif uploaded_file.name.lower().endswith(('.xlsx', '.xls')):
+                xlsx_count += 1
+                st.success(f"✅ Saved Excel: {uploaded_file.name}")
         
-        if st.button("Process Uploaded PDFs", use_container_width=True):
-            with st.spinner("Processing uploaded PDFs..."):
+        file_summary = []
+        if pdf_count > 0:
+            file_summary.append(f"{pdf_count} PDF(s)")
+        if xlsx_count > 0:
+            file_summary.append(f"{xlsx_count} Excel file(s)")
+        
+        if file_summary:
+            st.info(f"📦 Ready to process: {', '.join(file_summary)}")
+        
+        if st.button("Process Uploaded Documents", use_container_width=True):
+            with st.spinner("Processing uploaded documents (PDFs and Excel files)..."):
                 success = st.session_state.rag_system.build_knowledge_base(force_rebuild=True)
                 if success:
-                    st.success("✅ PDFs processed successfully!")
+                    st.success("✅ Documents processed successfully!")
                     st.session_state.kb_built = True
                     st.rerun()
     

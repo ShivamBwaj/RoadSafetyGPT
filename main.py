@@ -91,6 +91,90 @@ class RoadSafetyRAG:
             return []
         return list(DATA_DIR.glob("*.pdf"))
     
+    def get_xlsx_files(self) -> List[Path]:
+        """Get all XLSX files from data directory"""
+        if not DATA_DIR.exists():
+            DATA_DIR.mkdir(parents=True, exist_ok=True)
+            return []
+        return list(DATA_DIR.glob("*.xlsx")) + list(DATA_DIR.glob("*.xls"))
+    
+    def process_xlsx(self) -> List[Document]:
+        """Process all XLSX files and return documents"""
+        xlsx_files = self.get_xlsx_files()
+        all_documents = []
+        
+        if not xlsx_files:
+            return []
+        
+        for xlsx_path in xlsx_files:
+            try:
+                # Read Excel file
+                excel_file = pd.ExcelFile(str(xlsx_path))
+                file_documents = []
+                
+                # Process each sheet
+                for sheet_name in excel_file.sheet_names:
+                    try:
+                        df = pd.read_excel(xlsx_path, sheet_name=sheet_name)
+                        
+                        # Convert DataFrame to text format
+                        # Include column headers and data
+                        text_parts = []
+                        text_parts.append(f"Sheet: {sheet_name}")
+                        text_parts.append(f"Columns: {', '.join(df.columns.astype(str))}")
+                        text_parts.append("\nData:\n")
+                        
+                        # Convert each row to text
+                        for idx, row in df.iterrows():
+                            row_text = f"Row {idx + 1}: "
+                            row_data = []
+                            for col in df.columns:
+                                value = row[col]
+                                if pd.notna(value):  # Skip NaN values
+                                    row_data.append(f"{col}: {value}")
+                            row_text += " | ".join(row_data)
+                            text_parts.append(row_text)
+                        
+                        # Create document from sheet content
+                        sheet_text = "\n".join(text_parts)
+                        
+                        # Split long content into multiple documents if needed
+                        if len(sheet_text) > 5000:
+                            # Split into chunks
+                            chunks = [sheet_text[i:i+5000] for i in range(0, len(sheet_text), 5000)]
+                            for i, chunk in enumerate(chunks):
+                                doc = Document(
+                                    page_content=chunk,
+                                    metadata={
+                                        'source': xlsx_path.name,
+                                        'sheet': sheet_name,
+                                        'chunk': i + 1
+                                    }
+                                )
+                                file_documents.append(doc)
+                        else:
+                            doc = Document(
+                                page_content=sheet_text,
+                                metadata={
+                                    'source': xlsx_path.name,
+                                    'sheet': sheet_name
+                                }
+                            )
+                            file_documents.append(doc)
+                    
+                    except Exception as e:
+                        print(f"Error processing sheet '{sheet_name}' in {xlsx_path.name}: {str(e)}")
+                        continue
+                
+                all_documents.extend(file_documents)
+                print(f"✅ Processed {xlsx_path.name}: {len(file_documents)} documents from {len(excel_file.sheet_names)} sheets")
+                
+            except Exception as e:
+                print(f"Error processing {xlsx_path.name}: {str(e)}")
+                continue
+        
+        return all_documents
+    
     def process_pdfs(self) -> List[Document]:
         """Process all PDFs and return documents"""
         pdf_files = self.get_pdf_files()
@@ -111,15 +195,35 @@ class RoadSafetyRAG:
                 print(f"Error processing {pdf_path.name}: {str(e)}")
                 continue
         
+        return all_documents
+    
+    def process_all_documents(self) -> List[Document]:
+        """Process all supported file types (PDFs and XLSX)"""
+        all_documents = []
+        
+        # Process PDFs
+        pdf_docs = self.process_pdfs()
+        all_documents.extend(pdf_docs)
+        print(f"📄 Processed {len(pdf_docs)} documents from PDFs")
+        
+        # Process XLSX files
+        xlsx_docs = self.process_xlsx()
+        all_documents.extend(xlsx_docs)
+        print(f"📊 Processed {len(xlsx_docs)} documents from XLSX files")
+        
         # Split documents into chunks
-        split_docs = self.text_splitter.split_documents(all_documents)
-        return split_docs
+        if all_documents:
+            split_docs = self.text_splitter.split_documents(all_documents)
+            print(f"📝 Created {len(split_docs)} chunks from {len(all_documents)} documents")
+            return split_docs
+        
+        return []
     
     def build_knowledge_base(self, force_rebuild: bool = False):
         """Build or load the ChromaDB vector store"""
         if force_rebuild or not CHROMA_DB_DIR.exists() or not any(CHROMA_DB_DIR.rglob("*")):
-            # Process PDFs and create embeddings
-            documents = self.process_pdfs()
+            # Process all documents (PDFs and XLSX) and create embeddings
+            documents = self.process_all_documents()
             
             if not documents:
                 return False
@@ -130,7 +234,7 @@ class RoadSafetyRAG:
                 embedding=self.embeddings,
                 persist_directory=str(CHROMA_DB_DIR)
             )
-            print(f"Knowledge base built with {len(documents)} chunks from PDFs")
+            print(f"✅ Knowledge base built with {len(documents)} chunks from all documents")
             return True
         else:
             # Load existing vector store
