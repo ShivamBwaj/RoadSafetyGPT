@@ -21,7 +21,7 @@ from langchain_community.document_loaders import PyPDFLoader
 
 import groq
 
-# Load environment variables
+# Load environment variable
 load_dotenv()
 
 # Configuration
