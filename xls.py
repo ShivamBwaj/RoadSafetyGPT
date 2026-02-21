@@ -14,6 +14,18 @@ MODEL = "llama-3.1-8b-instant"
 # FUNCTION TO UPDATE ENTRY
 # -------------------------------
 def update_entry(entry):
+    """Generates structured data fields for road safety interventions based on a given context.
+    
+    Args:
+        entry (dict): A dictionary containing the context for the road safety intervention.
+    
+    Returns:
+        dict: A dictionary containing the generated structured data fields, including 'intervention', 'impact', and 'keywords'.
+    
+    Raises:
+        ValueError: If the input entry is not a dictionary.
+        Exception: If an error occurs while interacting with the chat client.
+    """
     context_text = entry["context"]
 
     prompt = f"""

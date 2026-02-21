@@ -36,9 +36,31 @@ class GroqLLM:
     """Wrapper for Groq LLM compatible with LangChain"""
     
     def __init__(self, model_name: str = None):
+        """Initializes a Groq client with a specified model name.
+        
+        Args:
+            model_name (str): The name of the Groq model to use. Defaults to GROQ_MODEL if not provided.
+        
+        Returns:
+            None
+        
+        Raises:
+            ValueError: If the model_name is not a string.
+        """
         self.client = groq.Groq(api_key=GROQ_API_KEY)
         self.model_name = model_name or GROQ_MODEL
     
+    def helloworld(self) -> str:
+        """Test method to verify Groq API connectivity"""
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model_name,
+                messages=[{"role": "user", "content": "Hello, Groq!"}]
+            )
+            return response.choices[0].message.content
+        except Exception as e:
+            return f"Error calling Groq API: {str(e)}"
+
     def __call__(self, prompt: str, **kwargs) -> str:
         """Invoke the LLM with a prompt"""
         try:
@@ -62,6 +84,17 @@ class RoadSafetyRAG:
     def __init__(self):
         # Use new langchain-huggingface package to avoid deprecation warning
         # Model will be downloaded on first use (may take a moment on cloud)
+        """Initializes the object with a Hugging Face embedding model and a text splitter.
+        
+        Args:
+            None
+        
+        Returns:
+            None
+        
+        Raises:
+            None
+        """
         self.embeddings = HuggingFaceEmbeddings(
             model_name="sentence-transformers/all-MiniLM-L6-v2",
             model_kwargs={'device': 'cpu'}  # Use CPU for cloud compatibility

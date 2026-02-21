@@ -25,6 +25,17 @@ class InterventionExtractor:
     """Extract interventions from PDF documents using LLM"""
     
     def __init__(self):
+        """Initializes the object with necessary components for data retrieval and analysis.
+        
+        Args:
+            None
+        
+        Returns:
+            None
+        
+        Raises:
+            None
+        """
         self.rag_system = RoadSafetyRAG()
         self.client = groq.Groq(api_key=GROQ_API_KEY)
         self.model_name = GROQ_MODEL

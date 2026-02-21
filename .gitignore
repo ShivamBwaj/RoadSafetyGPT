@@ -47,3 +47,9 @@ Thumbs.db
 # Data files (optional - uncomment if you don't want to commit PDFs)
 # data/*.pdf
 
+
+# autodocs output
+_site/
+docs/
+build_report.json
+.autodocs_state.json
