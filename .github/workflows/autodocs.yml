@@ -34,10 +34,10 @@ jobs:
           python-version: "3.12"
 
       - name: Install autodocs
-        run: pip install "autodocs[ai]"
+        run: pip install "autodocs[ai] @ git+https://github.com/ShivamBwaj/autodocs.git"
 
       - name: Generate documentation
-        run: autodocs generate --source ./src --output _site --format html --ai --incremental
+        run: autodocs generate --source ./ --output _site --format html --ai --incremental
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
 
